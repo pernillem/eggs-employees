@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { BarLoader } from 'react-spinners';
-import "./carousel.scss";
 
+import "./carousel.scss";
 import getEmployees from "../../api/getEmployees";
 import responsive from "./responsiveCarousel";
 
@@ -41,7 +41,7 @@ const EmployeeCarousel = () => {
       )
     } else {
       const employeeDiv = employees.map(employee => 
-        <div className="employee_item">
+        <div className="employee_item" key={employee.email}>
           <div className="employee_item-img">
             <img 
               alt={`${employee.firstName} ${employee.lastName}`}
