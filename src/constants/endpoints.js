@@ -1,0 +1,2 @@
+const employeesQuery = "*[_type == \"employee\" && type ==\"employee\"]{\n  firstName,\n  lastName,\n  title,\n  email,\n  telephone,\n  \"image\": image.asset->url,\n  offices[]->{\n  \tname,\n  \taddress,\n  \tzipCode,\n  \tcity,\n  \tcountry,\n  \temail,\n  \ttelepone,\n  \tmapUrl\n\t}\n}";
+export default employeesQuery;

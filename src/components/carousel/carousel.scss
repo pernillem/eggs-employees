@@ -1,0 +1,63 @@
+@import "../../styles//mixins.scss";
+
+.carousel-container{
+  margin: 0 5em;
+
+  .fetching-container {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    min-height: 100px;
+  }
+}
+.employee_item{
+  @include flexbox();  
+  @include flex-direction(column); 
+  margin: 0 10px 0 25px;
+
+  .employee_item-img {
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .employee_item-title {
+    font-size:12px;
+  }
+  .employee_item-telephone{
+    font-size:14px;
+  }
+  .employee_item-name {
+    font-size:16px;
+    font-weight: bold;
+  }
+}
+
+.custom-left-arrow {
+  position: absolute !important;
+  left: 5px;  
+  z-index: 1;
+  border: 1px solid grey;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.custom-right-arrow {
+  position: absolute !important;
+  right: 5px;
+  z-index: 1;
+  border: 1px solid grey;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
