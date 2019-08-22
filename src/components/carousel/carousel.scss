@@ -2,13 +2,13 @@
 
 .carousel-container{
   margin: 0 5em;
-
-  .fetching-container {
-    @include flexbox();
-    @include justify-content(center);
-    @include align-items(center);
-    min-height: 100px;
-  }
+}
+.fetching-container {
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  min-height: 100px;
+  width: 100vw;
 }
 .employee_item{
   @include flexbox();  
